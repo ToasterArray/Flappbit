@@ -1,0 +1,182 @@
+[gd_scene load_steps=17 format=3 uid="uid://xrovrqf4lw6t"]
+
+[ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="1_5nkgl"]
+[ext_resource type="Script" path="res://Scripts/MainMenuButtons.gd" id="1_sf4cd"]
+[ext_resource type="Script" path="res://Scripts/MoveOutStart.gd" id="2_47bg0"]
+[ext_resource type="StyleBox" uid="uid://bevpo2ximj3vy" path="res://Colors/LightModeColors/startbutton_bg.tres" id="4_0p2rx"]
+[ext_resource type="StyleBox" uid="uid://bns3v7m57vbjb" path="res://Colors/LightModeColors/startbuttonpressed_bg.tres" id="5_m0qtu"]
+[ext_resource type="StyleBox" uid="uid://gkrhghuo03xj" path="res://Colors/LightModeColors/settingsbutton_bg.tres" id="6_v6iht"]
+[ext_resource type="StyleBox" uid="uid://c2kwu8heaacup" path="res://Colors/LightModeColors/settingsbuttonpressed_bg.tres" id="7_7hcqq"]
+[ext_resource type="StyleBox" uid="uid://wgmqeoypai17" path="res://Colors/LightModeColors/quitbutton_bg.tres" id="8_81xcw"]
+[ext_resource type="StyleBox" uid="uid://1jrwo6eqfda" path="res://Colors/LightModeColors/quitbuttonpressed_bg.tres" id="9_1cejv"]
+[ext_resource type="Script" path="res://Scripts/Global.gd" id="9_t0plc"]
+[ext_resource type="Script" path="res://Scripts/MoveGameIn.gd" id="10_ilj4s"]
+[ext_resource type="Script" path="res://Scripts/MoveSettingsIn.gd" id="11_6h1pi"]
+[ext_resource type="Texture2D" uid="uid://csyyifnuqpw8v" path="res://bird_idle.png" id="11_fvdn1"]
+[ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="11_uhmcr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dyde"]
+radius = 4.78328
+height = 14.6919
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbg0o"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0.858824, 0.847059, 0.807843, 1)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Is this needed?" type="Node2D" parent="UI"]
+
+[node name="MenusAndGame" type="Node2D" parent="UI/Is this needed?"]
+script = ExtResource("1_sf4cd")
+
+[node name="Start" type="Node2D" parent="UI/Is this needed?/MenusAndGame"]
+script = ExtResource("2_47bg0")
+
+[node name="StartMenu" type="VBoxContainer" parent="UI/Is this needed?/MenusAndGame/Start"]
+offset_top = 644.0
+offset_right = 5760.0
+offset_bottom = 2524.0
+scale = Vector2(0.1, 0.1)
+
+[node name="Start" type="Button" parent="UI/Is this needed?/MenusAndGame/Start/StartMenu"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("4_0p2rx")
+theme_override_styles/hover = ExtResource("4_0p2rx")
+theme_override_styles/pressed = ExtResource("5_m0qtu")
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="UI/Is this needed?/MenusAndGame/Start/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("6_v6iht")
+theme_override_styles/hover = ExtResource("6_v6iht")
+theme_override_styles/pressed = ExtResource("7_7hcqq")
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="UI/Is this needed?/MenusAndGame/Start/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("8_81xcw")
+theme_override_styles/hover = ExtResource("8_81xcw")
+theme_override_styles/pressed = ExtResource("9_1cejv")
+text = "QUIT"
+
+[node name="Title" type="Label" parent="UI/Is this needed?/MenusAndGame/Start"]
+texture_filter = 2
+offset_top = 152.0
+offset_right = 5760.0
+offset_bottom = 885.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 750
+text = "Name Unspecified"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="UI/Is this needed?/MenusAndGame/Start"]
+offset_top = 224.0
+offset_right = 5760.0
+offset_bottom = 647.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 420
+text = "The Flappy Bird Clone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameObjects" type="Node2D" parent="UI/Is this needed?/MenusAndGame"]
+script = ExtResource("10_ilj4s")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
+position = Vector2(835, 440)
+scale = Vector2(8.44, 8.64)
+script = ExtResource("11_uhmcr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
+position = Vector2(0, 0.0805685)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_2dyde")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("11_fvdn1")
+
+[node name="Floor" type="StaticBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
+position = Vector2(864, 904)
+scale = Vector2(28.753, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
+shape = SubResource("RectangleShape2D_sbg0o")
+
+[node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
+offset_left = -9.94679
+offset_top = -9.83334
+offset_right = 10.0532
+offset_bottom = 10.1667
+color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[node name="Ceiling" type="StaticBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
+position = Vector2(864, -120)
+scale = Vector2(28.753, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Ceiling"]
+shape = SubResource("RectangleShape2D_sbg0o")
+
+[node name="Settings" type="Node2D" parent="UI/Is this needed?/MenusAndGame"]
+script = ExtResource("11_6h1pi")
+
+[node name="Title" type="Label" parent="UI/Is this needed?/MenusAndGame/Settings"]
+offset_left = -576.0
+offset_top = 352.0
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 75
+text = "Name Unspecified"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackFromSettings" type="Button" parent="UI/Is this needed?/MenusAndGame/Settings"]
+offset_left = -576.0
+offset_top = 764.0
+offset_right = 5184.0
+offset_bottom = 1364.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("8_81xcw")
+theme_override_styles/hover = ExtResource("8_81xcw")
+theme_override_styles/pressed = ExtResource("9_1cejv")
+text = "BACK"
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Emitters" type="Node2D" parent="."]
+
+[node name="Global" type="Node2D" parent="."]
+script = ExtResource("9_t0plc")
+
+[connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Start/StartMenu/Start" to="UI/Is this needed?/MenusAndGame" method="_on_start_pressed"]
+[connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Start/StartMenu/Settings" to="UI/Is this needed?/MenusAndGame" method="_on_settings_pressed"]
+[connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Settings/BackFromSettings" to="UI/Is this needed?/MenusAndGame" method="_on_back_from_settings_pressed"]
