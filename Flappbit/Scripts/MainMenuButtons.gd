@@ -21,3 +21,6 @@ func _on_settings_pressed():
 func _on_back_from_settings_pressed():
 	get_node("Start").move(Vector2(0, 0))
 	get_node("Settings").move(Vector2(0, 0))
+
+
+

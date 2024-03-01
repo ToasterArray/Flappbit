@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://xrovrqf4lw6t"]
+[gd_scene load_steps=18 format=3 uid="uid://xrovrqf4lw6t"]
 
 [ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="1_5nkgl"]
 [ext_resource type="Script" path="res://Scripts/MainMenuButtons.gd" id="1_sf4cd"]
@@ -12,8 +12,9 @@
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="9_t0plc"]
 [ext_resource type="Script" path="res://Scripts/MoveGameIn.gd" id="10_ilj4s"]
 [ext_resource type="Script" path="res://Scripts/MoveSettingsIn.gd" id="11_6h1pi"]
-[ext_resource type="Texture2D" uid="uid://csyyifnuqpw8v" path="res://bird_idle.png" id="11_fvdn1"]
+[ext_resource type="Texture2D" path="res://bird_idle.png" id="11_fvdn1"]
 [ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="11_uhmcr"]
+[ext_resource type="StyleBox" uid="uid://cujl751wvbvdu" path="res://Colors/LightModeColors/jump_button_sameindark.tres" id="13_vmnk4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dyde"]
 radius = 4.78328
@@ -26,6 +27,7 @@ height = 14.6919
 [node name="Background" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
+visibility_layer = 512
 offset_right = 576.0
 offset_bottom = 1024.0
 color = Color(0.858824, 0.847059, 0.807843, 1)
@@ -138,7 +140,24 @@ position = Vector2(864, -120)
 scale = Vector2(28.753, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Ceiling"]
+position = Vector2(0, -11.25)
 shape = SubResource("RectangleShape2D_sbg0o")
+
+[node name="Control" type="Control" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="UI/Is this needed?/MenusAndGame/GameObjects/Control"]
+layout_mode = 0
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 1024.0
+theme_override_styles/normal = ExtResource("13_vmnk4")
+theme_override_styles/hover = ExtResource("13_vmnk4")
+theme_override_styles/pressed = ExtResource("13_vmnk4")
+action_mode = 0
 
 [node name="Settings" type="Node2D" parent="UI/Is this needed?/MenusAndGame"]
 script = ExtResource("11_6h1pi")
@@ -179,4 +198,5 @@ script = ExtResource("9_t0plc")
 
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Start/StartMenu/Start" to="UI/Is this needed?/MenusAndGame" method="_on_start_pressed"]
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Start/StartMenu/Settings" to="UI/Is this needed?/MenusAndGame" method="_on_settings_pressed"]
+[connection signal="pressed" from="UI/Is this needed?/MenusAndGame/GameObjects/Control/Button" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Settings/BackFromSettings" to="UI/Is this needed?/MenusAndGame" method="_on_back_from_settings_pressed"]
