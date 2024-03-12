@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1tju6ftsjlob"]
+
+[ext_resource type="Script" path="res://Scripts/BeginMenu.gd" id="1_ep138"]
+[ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="2_k1dvi"]
+[ext_resource type="StyleBox" uid="uid://bevpo2ximj3vy" path="res://Colors/LightModeColors/startbutton_bg.tres" id="3_hwgax"]
+[ext_resource type="StyleBox" uid="uid://bns3v7m57vbjb" path="res://Colors/LightModeColors/startbuttonpressed_bg.tres" id="4_jqml0"]
+
+[node name="BeginMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ep138")
+
+[node name="Start" type="Button" parent="."]
+offset_top = 420.0
+offset_right = 5760.0
+offset_bottom = 1020.0
+scale = Vector2(0.1, 0.1)
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_k1dvi")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("3_hwgax")
+theme_override_styles/hover = ExtResource("3_hwgax")
+theme_override_styles/pressed = ExtResource("4_jqml0")
+text = "PLAY"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

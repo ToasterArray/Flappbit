@@ -9,8 +9,8 @@ func _ready():
 func _on_start_pressed():
 	get_node("Start").move(Vector2(-576, 0))
 	get_node("GameObjects").move(Vector2(-576, 0))
-	Global.is_playing = true
 	print(Global.is_playing)
+	$"../../../BeginMenu".show()
 
 
 func _on_settings_pressed():
@@ -24,3 +24,5 @@ func _on_back_from_settings_pressed():
 
 
 
+func _on_quit_pressed(): #literally just quits? dont know if android does shit the same
+	get_tree().quit()
