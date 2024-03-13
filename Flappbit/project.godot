@@ -44,6 +44,10 @@ Jump={
 
 pointing/emulate_touch_from_mouse=true
 
+[physics]
+
+2d/default_gravity=1000.0
+
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true

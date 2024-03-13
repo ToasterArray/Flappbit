@@ -23,6 +23,5 @@ func _on_back_from_settings_pressed():
 	get_node("Settings").move(Vector2(0, 0))
 
 
-
 func _on_quit_pressed(): #literally just quits? dont know if android does shit the same
 	get_tree().quit()

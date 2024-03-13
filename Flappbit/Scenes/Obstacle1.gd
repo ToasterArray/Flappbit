@@ -12,4 +12,4 @@ func _process(delta):
 	if(Global.is_playing == true):
 		self.position.x += speed
 	if(self.position.x <= -576):
-		self.position.x = 0
+		self.position.x = 200

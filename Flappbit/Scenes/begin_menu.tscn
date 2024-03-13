@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1tju6ftsjlob"]
+[gd_scene load_steps=7 format=3 uid="uid://d1tju6ftsjlob"]
 
 [ext_resource type="Script" path="res://Scripts/BeginMenu.gd" id="1_ep138"]
 [ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="2_k1dvi"]
 [ext_resource type="StyleBox" uid="uid://bevpo2ximj3vy" path="res://Colors/LightModeColors/startbutton_bg.tres" id="3_hwgax"]
 [ext_resource type="StyleBox" uid="uid://bns3v7m57vbjb" path="res://Colors/LightModeColors/startbuttonpressed_bg.tres" id="4_jqml0"]
+[ext_resource type="StyleBox" uid="uid://wgmqeoypai17" path="res://Colors/LightModeColors/quitbutton_bg.tres" id="5_kkj6t"]
+[ext_resource type="StyleBox" uid="uid://1jrwo6eqfda" path="res://Colors/LightModeColors/quitbuttonpressed_bg.tres" id="6_bqaxa"]
 
 [node name="BeginMenu" type="Control"]
 layout_mode = 3
@@ -14,7 +16,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ep138")
 
-[node name="Start" type="Button" parent="."]
+[node name="StartGame" type="Button" parent="."]
+layout_mode = 0
 offset_top = 420.0
 offset_right = 5760.0
 offset_bottom = 1020.0
@@ -28,4 +31,18 @@ theme_override_styles/hover = ExtResource("3_hwgax")
 theme_override_styles/pressed = ExtResource("4_jqml0")
 text = "PLAY"
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[node name="BackToMenu" type="Button" parent="."]
+offset_top = 481.0
+offset_right = 5760.0
+offset_bottom = 1081.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_k1dvi")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("5_kkj6t")
+theme_override_styles/hover = ExtResource("5_kkj6t")
+theme_override_styles/pressed = ExtResource("6_bqaxa")
+text = "BACK TO MENU"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]

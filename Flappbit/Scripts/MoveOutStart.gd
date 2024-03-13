@@ -7,5 +7,5 @@ func _ready():
 
 func move(target):
 	var move_tween = create_tween()
-	move_tween.tween_property(self, "position", target, 0.3).set_ease(Tween.EASE_OUT) #HALELUJAH
+	move_tween.tween_property(self, "position", target, 0.3).set_ease(Tween.EASE_IN_OUT) #HALELUJAH
 	
