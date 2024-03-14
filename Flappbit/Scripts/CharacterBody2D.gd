@@ -50,4 +50,5 @@ func reset_all():
 	$"../ScoreLabel".text = "Score: " + str(Global.score)
 	self.position = Vector2(835, 440)	#resets birb
 	self.velocity.y = 0
-	$"../Obstacles and button/Obstacle1".position = Vector2(200, 0) #resets pipe 1
+	$"../Obstacles and button/Obstacle1".position = Vector2(608, 210) #resets pipe 1
+	$"../Obstacles and button/Obstacle2".position = Vector2(1184, 270) #resets pipe 2

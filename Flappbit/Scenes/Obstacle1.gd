@@ -1,7 +1,7 @@
 extends Node2D
 
-
-var speed = -2
+var rng = RandomNumberGenerator.new()
+var speed = -4
 
 func _ready():
 	pass # Replace with function body.
@@ -10,6 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(Global.is_playing == true):
-		self.position.x += speed
-	if(self.position.x <= -576):
-		self.position.x = 200
+		position.x += speed
+	if(position.x <= -576):
+		position.x = 576
+		position.y = rng.randf_range(30, 400)

@@ -13,7 +13,7 @@ config_version=5
 config/name="Flappbit"
 run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://bird_idle.svg"
 
 [autoload]
 
@@ -46,7 +46,7 @@ pointing/emulate_touch_from_mouse=true
 
 [physics]
 
-2d/default_gravity=1000.0
+2d/default_gravity=1200.0
 
 [rendering]
 

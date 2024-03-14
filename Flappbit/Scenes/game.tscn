@@ -30,7 +30,7 @@ height = 14.6919
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbg0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2yvo"]
-size = Vector2(50, 228)
+size = Vector2(50, 248)
 
 [node name="Game" type="Node2D"]
 
@@ -118,7 +118,7 @@ vertical_alignment = 1
 script = ExtResource("10_ilj4s")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
-position = Vector2(750, 440)
+position = Vector2(750, 451)
 scale = Vector2(4.885, 5)
 script = ExtResource("11_uhmcr")
 
@@ -166,55 +166,93 @@ stream = ExtResource("14_blrbo")
 show_behind_parent = true
 
 [node name="Obstacle1" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
-position = Vector2(218, 0)
+position = Vector2(528, 270)
 script = ExtResource("16_nx2c6")
 
 [node name="Pipe1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1"]
-position = Vector2(1237, 766)
+position = Vector2(1237, 691)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
-position = Vector2(-211, -184)
+position = Vector2(-211, -82)
 shape = ExtResource("16_wdhjf")
 
 [node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
 offset_left = -250.0
 offset_top = -384.0
 offset_right = -170.0
-offset_bottom = 14.0
+offset_bottom = 116.0
 color = Color(0.141176, 0.898039, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
 offset_left = -251.0
-offset_top = -1026.0
+offset_top = -1143.0
 offset_right = -171.0
-offset_bottom = -626.0
+offset_bottom = -643.0
 color = Color(0.141176, 0.898039, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
-position = Vector2(-211, -826)
+position = Vector2(-211, -946)
 shape = ExtResource("16_wdhjf")
 
 [node name="ScoreAdder1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1"]
 position = Vector2(-85, 0)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/ScoreAdder1"]
-position = Vector2(1112, 263)
+position = Vector2(1112, 178)
+shape = SubResource("RectangleShape2D_p2yvo")
+
+[node name="Obstacle2" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
+position = Vector2(1180, 210)
+script = ExtResource("16_nx2c6")
+
+[node name="Pipe1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2"]
+position = Vector2(1237, 691)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
+position = Vector2(-211, -82)
+shape = ExtResource("16_wdhjf")
+
+[node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
+offset_left = -250.0
+offset_top = -384.0
+offset_right = -170.0
+offset_bottom = 116.0
+color = Color(0.141176, 0.898039, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
+offset_left = -251.0
+offset_top = -1143.0
+offset_right = -171.0
+offset_bottom = -643.0
+color = Color(0.141176, 0.898039, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
+position = Vector2(-211, -946)
+shape = ExtResource("16_wdhjf")
+
+[node name="ScoreAdder1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2"]
+position = Vector2(-85, 0)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/ScoreAdder1"]
+position = Vector2(1112, 178)
 shape = SubResource("RectangleShape2D_p2yvo")
 
 [node name="Button" type="Button" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
 offset_left = 576.0
 offset_right = 1152.0
-offset_bottom = 1024.0
+offset_bottom = 1320.0
 theme_override_styles/normal = ExtResource("13_vmnk4")
 theme_override_styles/hover = ExtResource("13_vmnk4")
 theme_override_styles/pressed = ExtResource("13_vmnk4")
 action_mode = 0
 
 [node name="ScoreLabel" type="Label" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
-offset_left = 576.0
-offset_right = 1276.0
+offset_left = 643.0
+offset_right = 1987.0
 offset_bottom = 420.0
 scale = Vector2(0.115, 0.077)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -261,6 +299,8 @@ visible = false
 [connection signal="body_entered" from="UI/Is this needed?/MenusAndGame/GameObjects/Floor" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_floor_body_entered"]
 [connection signal="body_entered" from="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_pipe_1_body_entered"]
 [connection signal="body_entered" from="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/ScoreAdder1" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_score_adder_1_body_entered"]
+[connection signal="body_entered" from="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_pipe_1_body_entered"]
+[connection signal="body_entered" from="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/ScoreAdder1" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_score_adder_1_body_entered"]
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Button" to="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Settings/BackFromSettings" to="UI/Is this needed?/MenusAndGame" method="_on_back_from_settings_pressed"]
 [connection signal="toggled" from="UI/Is this needed?/MenusAndGame/Settings/MuteSFXbtn" to="Global" method="_on_check_button_toggled"]
