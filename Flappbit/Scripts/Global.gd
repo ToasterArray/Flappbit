@@ -2,7 +2,7 @@ extends Node2D
 
 var is_playing = false
 var score = 0
-var obstacle_speed = -300 
+var obstacle_speed = -450 
 
 var save_data:SaveData
 
