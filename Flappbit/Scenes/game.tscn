@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://xrovrqf4lw6t"]
+[gd_scene load_steps=27 format=3 uid="uid://xrovrqf4lw6t"]
 
 [ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="1_5nkgl"]
 [ext_resource type="Script" path="res://Scripts/MainMenuButtons.gd" id="1_sf4cd"]
@@ -17,9 +17,10 @@
 [ext_resource type="StyleBox" uid="uid://cujl751wvbvdu" path="res://Colors/LightModeColors/jump_button_sameindark.tres" id="13_vmnk4"]
 [ext_resource type="AudioStream" uid="uid://bjyfr2eb7nyo" path="res://Audio/jump_effect.wav" id="14_blrbo"]
 [ext_resource type="AudioStream" uid="uid://brq7i51xgdogu" path="res://Audio/death_sound.wav" id="15_gtrqm"]
-[ext_resource type="Script" path="res://Scenes/Obstacle1.gd" id="16_nx2c6"]
+[ext_resource type="Script" path="res://Scripts/Obstacle1.gd" id="16_nx2c6"]
 [ext_resource type="Texture2D" uid="uid://ce51hoqgo6n6s" path="res://Sprites/LightMode/sound_mute.png" id="16_psh0t"]
 [ext_resource type="Shape2D" uid="uid://dop2wpqifwbb5" path="res://Sprites/pipe_shape.tres" id="16_wdhjf"]
+[ext_resource type="Script" path="res://Scripts/Obstacle2.gd" id="17_3e1a1"]
 [ext_resource type="Texture2D" uid="uid://bsx57yw1a2vun" path="res://Sprites/LightMode/sound_unmute.png" id="17_qk0pc"]
 [ext_resource type="PackedScene" uid="uid://d1tju6ftsjlob" path="res://Scenes/begin_menu.tscn" id="19_ggk60"]
 
@@ -140,27 +141,30 @@ position = Vector2(0, -11.25)
 shape = SubResource("RectangleShape2D_sbg0o")
 
 [node name="Floor" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
-position = Vector2(864, 902)
+position = Vector2(863, 902)
 scale = Vector2(28.753, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
 shape = SubResource("RectangleShape2D_sbg0o")
 
 [node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
-offset_left = -10.0
+offset_left = -10.0163
 offset_top = -10.0
-offset_right = 10.0
+offset_right = 10.9837
 offset_bottom = 35.0
 color = Color(0.14902, 0.14902, 0.14902, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Audio" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
 
 [node name="DeathSoundPlayer" type="AudioStreamPlayer2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Audio"]
 stream = ExtResource("15_gtrqm")
 volume_db = 5.0
+bus = &"SFX"
 
 [node name="JumpSoundPlayer" type="AudioStreamPlayer2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Audio"]
 stream = ExtResource("14_blrbo")
+bus = &"SFX"
 
 [node name="Obstacles and button" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
 show_behind_parent = true
@@ -205,7 +209,7 @@ shape = SubResource("RectangleShape2D_p2yvo")
 
 [node name="Obstacle2" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
 position = Vector2(1180, 210)
-script = ExtResource("16_nx2c6")
+script = ExtResource("17_3e1a1")
 
 [node name="Pipe1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2"]
 position = Vector2(1237, 691)
@@ -244,21 +248,32 @@ shape = SubResource("RectangleShape2D_p2yvo")
 [node name="Button" type="Button" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
 offset_left = 576.0
 offset_right = 1152.0
-offset_bottom = 1320.0
+offset_bottom = 1324.0
 theme_override_styles/normal = ExtResource("13_vmnk4")
 theme_override_styles/hover = ExtResource("13_vmnk4")
 theme_override_styles/pressed = ExtResource("13_vmnk4")
 action_mode = 0
 
 [node name="ScoreLabel" type="Label" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
-offset_left = 643.0
-offset_right = 1987.0
+offset_left = 640.0
+offset_right = 1984.0
 offset_bottom = 420.0
 scale = Vector2(0.115, 0.077)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_5nkgl")
 theme_override_font_sizes/font_size = 420
 text = "Score: 0"
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
+offset_left = 980.0
+offset_right = 3164.0
+offset_bottom = 420.0
+scale = Vector2(0.115, 0.077)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5nkgl")
+theme_override_font_sizes/font_size = 420
+text = "High: 0"
 vertical_alignment = 1
 
 [node name="Settings" type="Node2D" parent="UI/Is this needed?/MenusAndGame"]
