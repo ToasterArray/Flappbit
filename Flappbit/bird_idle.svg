@@ -1,6 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1">
-<g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 0 339.078125 L 0 586.582031 L 146.285156 586.582031 L 146.285156 751.582031 L 292.570312 751.582031 L 292.570312 916.582031 L 731.429688 916.582031 L 731.429688 751.582031 L 877.714844 751.582031 L 877.714844 421.578125 L 1024 421.578125 L 1024 256.578125 L 877.714844 256.578125 L 877.714844 91.574219 L 438.855469 91.574219 L 438.855469 256.578125 L 146.285156 256.578125 L 146.285156 91.574219 L 0 91.574219 Z M 877.714844 339.078125 L 877.714844 421.578125 L 731.429688 421.578125 L 731.429688 751.582031 L 292.570312 751.582031 L 292.570312 586.582031 L 146.285156 586.582031 L 146.285156 421.578125 L 438.855469 421.578125 L 438.855469 256.578125 L 877.714844 256.578125 Z M 877.714844 339.078125 "/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024px"
+   height="1024px"
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="bird_idle.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.40234375"
+     inkscape:cx="531.88349"
+     inkscape:cy="679.76699"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <g
+     id="surface1"
+     transform="matrix(0.63106796,0,0,0.63106796,188.8932,185.97057)">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 0,339.07812 v 247.50391 h 146.28516 v 165 h 146.28515 v 165 h 438.85938 v -165 H 877.71484 V 421.57812 H 1024 v -165 H 877.71484 V 91.574219 H 438.85547 V 256.57812 H 146.28516 V 91.574219 H 0 Z m 877.71484,0 v 82.5 H 731.42969 V 751.58203 H 292.57031 v -165 H 146.28516 V 421.57812 h 292.57031 v -165 h 438.85937 z m 0,0"
+       id="path2" />
+  </g>
 </svg>

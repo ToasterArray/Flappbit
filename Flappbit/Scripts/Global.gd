@@ -13,10 +13,8 @@ func _ready():
 
 func _on_check_button_toggled(toggled_on):
 	if(toggled_on == true):
-		save_data.save()
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), true)
 	if(toggled_on == false):
-		save_data.save()
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), false)
 
 

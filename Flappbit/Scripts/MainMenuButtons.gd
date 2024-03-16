@@ -11,6 +11,7 @@ func _on_start_pressed():
 	get_node("GameObjects").move(Vector2(-576, 0))
 	print(Global.is_playing)
 	$"../../../BeginMenu".show()
+	$GameObjects/HighScoreLabel.text = "High: " + str(Global.save_data.high_score)
 
 
 func _on_settings_pressed():
