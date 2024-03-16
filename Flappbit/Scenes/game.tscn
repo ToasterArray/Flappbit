@@ -25,10 +25,11 @@
 [ext_resource type="PackedScene" uid="uid://d1tju6ftsjlob" path="res://Scenes/begin_menu.tscn" id="19_ggk60"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dyde"]
-radius = 4.78328
+radius = 4.31943
 height = 14.6919
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbg0o"]
+size = Vector2(20, 14.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2yvo"]
 size = Vector2(50, 248)
@@ -124,9 +125,11 @@ scale = Vector2(4.885, 5)
 script = ExtResource("11_uhmcr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
-position = Vector2(0, 0.0805685)
-rotation = 1.5708
+position = Vector2(0, 0.0805664)
+rotation = 4.71239
 shape = SubResource("CapsuleShape2D_2dyde")
+one_way_collision = true
+one_way_collision_margin = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
 scale = Vector2(0.005, 0.005)
@@ -145,13 +148,15 @@ position = Vector2(863, 902)
 scale = Vector2(28.753, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
+position = Vector2(0, 2.625)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_sbg0o")
 
 [node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Floor"]
 offset_left = -10.0163
-offset_top = -10.0
+offset_top = -5.41667
 offset_right = 10.9837
-offset_bottom = 35.0
+offset_bottom = 34.5833
 color = Color(0.14902, 0.14902, 0.14902, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -177,34 +182,34 @@ script = ExtResource("16_nx2c6")
 position = Vector2(1237, 691)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
-position = Vector2(-211, -82)
+position = Vector2(-211, -79)
 shape = ExtResource("16_wdhjf")
 
 [node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
 offset_left = -250.0
-offset_top = -384.0
+offset_top = -382.0
 offset_right = -170.0
-offset_bottom = 116.0
+offset_bottom = 168.0
 color = Color(0.141176, 0.898039, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
 offset_left = -251.0
-offset_top = -1143.0
+offset_top = -1196.0
 offset_right = -171.0
-offset_bottom = -643.0
+offset_bottom = -646.0
 color = Color(0.141176, 0.898039, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
-position = Vector2(-211, -946)
+position = Vector2(-211, -948)
 shape = ExtResource("16_wdhjf")
 
 [node name="ScoreAdder1" type="Area2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1"]
 position = Vector2(-85, 0)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/ScoreAdder1"]
-position = Vector2(1112, 178)
+position = Vector2(1130, 178)
 shape = SubResource("RectangleShape2D_p2yvo")
 
 [node name="Obstacle2" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
@@ -215,14 +220,14 @@ script = ExtResource("17_3e1a1")
 position = Vector2(1237, 691)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
-position = Vector2(-211, -82)
+position = Vector2(-211, -76)
 shape = ExtResource("16_wdhjf")
 
 [node name="ColorRect" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
 offset_left = -250.0
-offset_top = -384.0
+offset_top = -377.0
 offset_right = -170.0
-offset_bottom = 116.0
+offset_bottom = 123.0
 color = Color(0.141176, 0.898039, 0, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -242,13 +247,14 @@ shape = ExtResource("16_wdhjf")
 position = Vector2(-85, 0)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/ScoreAdder1"]
-position = Vector2(1112, 178)
+position = Vector2(1133, 178)
 shape = SubResource("RectangleShape2D_p2yvo")
 
 [node name="Button" type="Button" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button"]
-offset_left = 576.0
-offset_right = 1152.0
-offset_bottom = 1324.0
+offset_left = 583.0
+offset_top = -8.0
+offset_right = 1159.0
+offset_bottom = 1316.0
 theme_override_styles/normal = ExtResource("13_vmnk4")
 theme_override_styles/hover = ExtResource("13_vmnk4")
 theme_override_styles/pressed = ExtResource("13_vmnk4")
