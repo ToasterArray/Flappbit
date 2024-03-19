@@ -20,6 +20,7 @@ func reset_all():	#mess pls help
 	$"../UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D".velocity.y = 0
 	$"../UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1".position = Vector2(608, 210) #resets pipe 1
 	$"../UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2".position = Vector2(1108, 270) #resets pipe 2
+	Global.obstacle_speed = -450
 
 func _on_start_pressed():
 	Global.is_playing = true

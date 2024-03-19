@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://etmdcdep6btw"]
+
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_j4guj"]
+[ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="1_ww73o"]
+[ext_resource type="StyleBox" uid="uid://bevpo2ximj3vy" path="res://Colors/LightModeColors/startbutton_bg.tres" id="3_kblpq"]
+[ext_resource type="StyleBox" uid="uid://bns3v7m57vbjb" path="res://Colors/LightModeColors/startbuttonpressed_bg.tres" id="4_a25lc"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4guj")
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 2
+offset_top = 152.0
+offset_right = 5760.0
+offset_bottom = 885.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ww73o")
+theme_override_font_sizes/font_size = 750
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0, 0, 0, 0.203922)
+
+[node name="ContinueGame" type="Button" parent="."]
+offset_top = 420.0
+offset_right = 5760.0
+offset_bottom = 1020.0
+scale = Vector2(0.1, 0.1)
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ww73o")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/normal = ExtResource("3_kblpq")
+theme_override_styles/hover = ExtResource("3_kblpq")
+theme_override_styles/pressed = ExtResource("4_a25lc")
+text = "CONTINUE
+"
+
+[connection signal="pressed" from="ContinueGame" to="." method="_on_continue_game_pressed"]

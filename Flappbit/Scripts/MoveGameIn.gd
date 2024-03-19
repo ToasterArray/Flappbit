@@ -8,3 +8,8 @@ func _ready():
 func move(target):
 	var move_tween = create_tween()
 	move_tween.tween_property(self, "position", target, 0.3).set_ease(Tween.EASE_IN_OUT) #HALELUJAH
+
+
+func _on_pause_button_pressed():
+	Global.is_playing = false
+	$"../../../../PauseMenu".show()
