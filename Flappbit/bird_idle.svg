@@ -23,7 +23,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.40234375"
-     inkscape:cx="531.88349"
+     inkscape:cx="531.8835"
      inkscape:cy="679.76699"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -33,7 +33,7 @@
      inkscape:current-layer="svg5" />
   <g
      id="surface1"
-     transform="matrix(0.63106796,0,0,0.63106796,188.8932,185.97057)">
+     transform="matrix(0.63106796,0,0,0.63106796,212.8932,207.97057)">
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="m 0,339.07812 v 247.50391 h 146.28516 v 165 h 146.28515 v 165 h 438.85938 v -165 H 877.71484 V 421.57812 H 1024 v -165 H 877.71484 V 91.574219 H 438.85547 V 256.57812 H 146.28516 V 91.574219 H 0 Z m 877.71484,0 v 82.5 H 731.42969 V 751.58203 H 292.57031 v -165 H 146.28516 V 421.57812 h 292.57031 v -165 h 438.85937 z m 0,0"

@@ -21,3 +21,14 @@ func _on_check_button_toggled(toggled_on):
 		save_data.save()
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), false)
 
+
+
+func _on_mute_musi_cbtn_toggled(toggled_on):
+	if(toggled_on == true):
+		save_data.MUSIC_off = true
+		save_data.save()
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), true)
+	if(toggled_on == false):
+		save_data.MUSIC_off = false
+		save_data.save()
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), false)

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   height="500"
+   width="500"
+   version="1.1"
+   id="Layer_1"
+   viewBox="0 0 320 320"
+   xml:space="preserve"
+   sodipodi:docname="music_unmute.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs848" /><sodipodi:namedview
+   id="namedview846"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   showguides="true"
+   inkscape:guide-bbox="true"
+   inkscape:zoom="0.515"
+   inkscape:cx="-236.8932"
+   inkscape:cy="400.97087"
+   inkscape:window-width="1920"
+   inkscape:window-height="1009"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1"
+   width="480px"><sodipodi:guide
+     position="-202.56311,386.73398"
+     orientation="0,-1"
+     id="guide1137" /></sodipodi:namedview>
+<g
+   id="g843"
+   transform="matrix(0.6,0,0,0.6,6.7106797,10.80647)"
+   style="fill:#262626;fill-opacity:1">
+	<g
+   id="g841"
+   style="fill:#262626;fill-opacity:1">
+		<path
+   d="M 503.319,5.939 C 497.813,1.234 490.536,-0.828 483.361,0.304 L 169.555,49.852 c -12.04,1.901 -20.909,12.28 -20.909,24.47 v 99.097 156.903 H 99.097 C 44.455,330.323 0,371.073 0,421.161 0,471.25 44.455,512 99.097,512 c 54.642,0 99.097,-40.75 99.097,-90.839 V 355.096 194.588 l 264.258,-41.725 v 136.169 h -49.548 c -54.642,0 -99.097,40.75 -99.097,90.839 0,50.089 44.455,90.839 99.097,90.839 54.642,0 99.096,-40.751 99.096,-90.839 V 313.806 123.871 24.774 c 0,-7.245 -3.173,-14.128 -8.681,-18.835 z"
+   id="path839"
+   style="fill:#262626;fill-opacity:1" />
+	</g>
+</g>
+</svg>
