@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/MoveGameIn.gd" id="10_ilj4s"]
 [ext_resource type="Script" path="res://Scripts/MoveSettingsIn.gd" id="11_6h1pi"]
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="11_uhmcr"]
-[ext_resource type="Texture2D" uid="uid://5aofc4rdor3e" path="res://Sprites/bird_idle _nostalgic.png" id="12_fdg36"]
+[ext_resource type="Texture2D" uid="uid://csyyifnuqpw8v" path="res://Sprites/bird_idle.png" id="13_05yf0"]
 [ext_resource type="StyleBox" uid="uid://cujl751wvbvdu" path="res://Colors/LightModeColors/jump_button_sameindark.tres" id="13_vmnk4"]
 [ext_resource type="AudioStream" uid="uid://bjyfr2eb7nyo" path="res://Audio/jump_effect.wav" id="14_blrbo"]
 [ext_resource type="AudioStream" uid="uid://brq7i51xgdogu" path="res://Audio/death_sound.wav" id="15_gtrqm"]
@@ -140,7 +140,7 @@ one_way_collision_margin = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
 scale = Vector2(0.005, 0.005)
-texture = ExtResource("12_fdg36")
+texture = ExtResource("13_05yf0")
 
 [node name="Ceiling" type="StaticBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
 position = Vector2(864, -120)
