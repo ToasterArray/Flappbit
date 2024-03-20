@@ -26,7 +26,7 @@ func _on_start_pressed():
 	Global.is_playing = true
 	self.hide()
 	reset_all()
-	$"../UI/Is this needed?/MenusAndGame/GameObjects/Audio/BackgroundMusic".play()
+	$"../UI/Is this needed?/MenusAndGame/GameObjects/Audio/BGmusic".play()
 	
 
 func _on_back_to_menu_pressed():

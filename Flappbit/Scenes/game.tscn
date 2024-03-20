@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/ButtonSaves.gd" id="1_h2jka"]
 [ext_resource type="Script" path="res://Scripts/MainMenuButtons.gd" id="1_sf4cd"]
 [ext_resource type="Script" path="res://Scripts/MoveOutStart.gd" id="2_47bg0"]
-[ext_resource type="AudioStream" uid="uid://b4ndrcdn0apph" path="res://Audio/Vivaldi Winter.mp3" id="2_frwcv"]
 [ext_resource type="StyleBox" uid="uid://bevpo2ximj3vy" path="res://Colors/LightModeColors/startbutton_bg.tres" id="4_0p2rx"]
 [ext_resource type="StyleBox" uid="uid://bns3v7m57vbjb" path="res://Colors/LightModeColors/startbuttonpressed_bg.tres" id="5_m0qtu"]
 [ext_resource type="StyleBox" uid="uid://gkrhghuo03xj" path="res://Colors/LightModeColors/settingsbutton_bg.tres" id="6_v6iht"]
@@ -15,10 +14,11 @@
 [ext_resource type="Script" path="res://Scripts/MoveGameIn.gd" id="10_ilj4s"]
 [ext_resource type="Script" path="res://Scripts/MoveSettingsIn.gd" id="11_6h1pi"]
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="11_uhmcr"]
-[ext_resource type="Texture2D" uid="uid://csyyifnuqpw8v" path="res://Sprites/bird_idle.png" id="13_4esdb"]
+[ext_resource type="Texture2D" uid="uid://5aofc4rdor3e" path="res://Sprites/bird_idle _nostalgic.png" id="12_fdg36"]
 [ext_resource type="StyleBox" uid="uid://cujl751wvbvdu" path="res://Colors/LightModeColors/jump_button_sameindark.tres" id="13_vmnk4"]
 [ext_resource type="AudioStream" uid="uid://bjyfr2eb7nyo" path="res://Audio/jump_effect.wav" id="14_blrbo"]
 [ext_resource type="AudioStream" uid="uid://brq7i51xgdogu" path="res://Audio/death_sound.wav" id="15_gtrqm"]
+[ext_resource type="AudioStream" uid="uid://c5fkdrcnxaq" path="res://Audio/winter.mp3" id="16_61umj"]
 [ext_resource type="Script" path="res://Scripts/Obstacle1.gd" id="16_nx2c6"]
 [ext_resource type="Texture2D" uid="uid://ce51hoqgo6n6s" path="res://Sprites/LightMode/sound_mute.png" id="16_psh0t"]
 [ext_resource type="Shape2D" uid="uid://dop2wpqifwbb5" path="res://Sprites/pipe_shape.tres" id="16_wdhjf"]
@@ -140,7 +140,7 @@ one_way_collision_margin = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/CharacterBody2D"]
 scale = Vector2(0.005, 0.005)
-texture = ExtResource("13_4esdb")
+texture = ExtResource("12_fdg36")
 
 [node name="Ceiling" type="StaticBody2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
 position = Vector2(864, -120)
@@ -177,9 +177,10 @@ bus = &"SFX"
 stream = ExtResource("14_blrbo")
 bus = &"SFX"
 
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Audio"]
-stream = ExtResource("2_frwcv")
+[node name="BGmusic" type="AudioStreamPlayer" parent="UI/Is this needed?/MenusAndGame/GameObjects/Audio"]
+stream = ExtResource("16_61umj")
 volume_db = 15.0
+bus = &"Music"
 
 [node name="Obstacles and button" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
 show_behind_parent = true

@@ -32,12 +32,14 @@ func _on_floor_body_entered(body):
 	Global.is_playing = false
 	$"../Audio/DeathSoundPlayer".play()
 	$"../../../../../BeginMenu".show()
+	$"../Audio/BGmusic".stop()
 
 func _on_pipe_1_body_entered(body):		#wanted to connect to above funcion but noooooooo why should I be able to
 	if(body.name == "CharacterBody2D"):
 		Global.is_playing = false
 		$"../Audio/DeathSoundPlayer".play()
 		$"../../../../../BeginMenu".show()
+		$"../Audio/BGmusic".stop()
 
 func _on_score_adder_1_body_entered(body):
 	Global.score += 1
