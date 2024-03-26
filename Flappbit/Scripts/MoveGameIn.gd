@@ -13,3 +13,4 @@ func move(target):
 func _on_pause_button_pressed():
 	Global.is_playing = false
 	$"../../../../PauseMenu".show()
+	$Audio/BGmusic.stop()

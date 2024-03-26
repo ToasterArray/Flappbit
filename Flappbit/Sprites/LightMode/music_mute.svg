@@ -27,7 +27,7 @@
    showguides="true"
    inkscape:guide-bbox="true"
    inkscape:zoom="1.03"
-   inkscape:cx="279.61165"
+   inkscape:cx="280.09709"
    inkscape:cy="322.81553"
    inkscape:window-width="1920"
    inkscape:window-height="1009"
@@ -38,7 +38,7 @@
    width="500px" />
 <g
    id="g843"
-   transform="matrix(0.6,0,0,0.6,6.2384466,9.9293104)"
+   transform="matrix(0.6,0,0,0.6,6.23845,9.9293104)"
    style="fill:#262626;fill-opacity:1">
 	<g
    id="g841"
@@ -50,10 +50,10 @@
 	</g>
 </g>
 <rect
-   style="fill:#262626;fill-opacity:1;fill-rule:evenodd;stroke:#dbd8ce;stroke-width:2.30627"
+   style="fill:#262626;fill-opacity:1;fill-rule:evenodd;stroke:#dbd8ce;stroke-width:2.12879"
    id="rect1055"
-   width="406.41354"
-   height="23.942791"
-   x="28.269924"
-   y="-14.238129"
-   transform="rotate(45)" /></svg>
+   width="375.13828"
+   height="22.100292"
+   x="60.969349"
+   y="-21.979259"
+   transform="matrix(0.69327926,0.72066904,-0.69327926,0.72066904,0,0)" /></svg>

@@ -14,4 +14,6 @@ func _process(delta):
 func _on_continue_game_pressed():	#unpauses game
 	self.hide()
 	Global.is_playing = true
+	$"../UI/Is this needed?/MenusAndGame/GameObjects/PauseButton".show()
+	$"../UI/Is this needed?/MenusAndGame/GameObjects/Audio/BGmusic".play()
 	

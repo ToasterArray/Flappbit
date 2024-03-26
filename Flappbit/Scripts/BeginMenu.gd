@@ -27,6 +27,7 @@ func _on_start_pressed():
 	self.hide()
 	reset_all()
 	$"../UI/Is this needed?/MenusAndGame/GameObjects/Audio/BGmusic".play()
+	$"../UI/Is this needed?/MenusAndGame/GameObjects/PauseButton".show()
 	
 
 func _on_back_to_menu_pressed():

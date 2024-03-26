@@ -25,3 +25,14 @@ func _on_back_from_settings_pressed():
 
 func _on_quit_pressed(): #literally just quits? dont know if android does shit the same
 	get_tree().quit()
+
+
+func _on_change_spritebtn_toggled(toggled_on):
+	if(toggled_on == true):
+		Global.save_data.nostalgia_texture_on = true
+		Global.save_data.save()
+		$GameObjects/CharacterBody2D/Sprite2D.set_texture(Global.nostalgia_texture)
+	if(toggled_on == false):
+		Global.save_data.nostalgia_texture_on = false
+		Global.save_data.save()
+		$GameObjects/CharacterBody2D/Sprite2D.set_texture(Global.basic_texture)

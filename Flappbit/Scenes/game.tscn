@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://xrovrqf4lw6t"]
+[gd_scene load_steps=34 format=3 uid="uid://xrovrqf4lw6t"]
 
 [ext_resource type="FontFile" uid="uid://coa7xhxar8yje" path="res://Fonts/VT323-Regular.ttf" id="1_5nkgl"]
 [ext_resource type="Script" path="res://Scripts/ButtonSaves.gd" id="1_h2jka"]
@@ -18,8 +18,8 @@
 [ext_resource type="StyleBox" uid="uid://cujl751wvbvdu" path="res://Colors/LightModeColors/jump_button_sameindark.tres" id="13_vmnk4"]
 [ext_resource type="AudioStream" uid="uid://bjyfr2eb7nyo" path="res://Audio/jump_effect.wav" id="14_blrbo"]
 [ext_resource type="AudioStream" uid="uid://brq7i51xgdogu" path="res://Audio/death_sound.wav" id="15_gtrqm"]
-[ext_resource type="AudioStream" uid="uid://c5fkdrcnxaq" path="res://Audio/winter.mp3" id="16_61umj"]
 [ext_resource type="Script" path="res://Scripts/Obstacle1.gd" id="16_nx2c6"]
+[ext_resource type="AudioStream" uid="uid://1v8r3dru6fl0" path="res://Audio/flappbitmusicmaybe.mp3" id="16_oad6k"]
 [ext_resource type="Texture2D" uid="uid://ce51hoqgo6n6s" path="res://Sprites/LightMode/sound_mute.png" id="16_psh0t"]
 [ext_resource type="Shape2D" uid="uid://dop2wpqifwbb5" path="res://Sprites/pipe_shape.tres" id="16_wdhjf"]
 [ext_resource type="Script" path="res://Scripts/Obstacle2.gd" id="17_3e1a1"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://etmdcdep6btw" path="res://Scenes/pause_menu.tscn" id="25_8kcwq"]
 [ext_resource type="Texture2D" uid="uid://bvh7d8lng6pf2" path="res://Sprites/LightMode/music_mute.svg" id="25_wkd5x"]
 [ext_resource type="Texture2D" uid="uid://do014w57pj2ix" path="res://Sprites/LightMode/music_unmute.svg" id="26_io3oi"]
+[ext_resource type="Texture2D" uid="uid://5aofc4rdor3e" path="res://Sprites/bird_idle _nostalgic.png" id="27_3oa8d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dyde"]
 radius = 4.31943
@@ -178,8 +179,8 @@ stream = ExtResource("14_blrbo")
 bus = &"SFX"
 
 [node name="BGmusic" type="AudioStreamPlayer" parent="UI/Is this needed?/MenusAndGame/GameObjects/Audio"]
-stream = ExtResource("16_61umj")
-volume_db = 15.0
+stream = ExtResource("16_oad6k")
+volume_db = 1.0
 bus = &"Music"
 
 [node name="Obstacles and button" type="Node2D" parent="UI/Is this needed?/MenusAndGame/GameObjects"]
@@ -201,7 +202,7 @@ offset_left = -250.0
 offset_top = -382.0
 offset_right = -170.0
 offset_bottom = 168.0
-color = Color(0.141176, 0.898039, 0, 1)
+color = Color(0.25098, 0.901961, 0.133333, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
@@ -209,7 +210,7 @@ offset_left = -251.0
 offset_top = -1196.0
 offset_right = -171.0
 offset_bottom = -646.0
-color = Color(0.141176, 0.898039, 0, 1)
+color = Color(0.25098, 0.901961, 0.133333, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle1/Pipe1"]
@@ -239,7 +240,7 @@ offset_left = -250.0
 offset_top = -377.0
 offset_right = -170.0
 offset_bottom = 123.0
-color = Color(0.141176, 0.898039, 0, 1)
+color = Color(0.25098, 0.901961, 0.133333, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
@@ -247,7 +248,7 @@ offset_left = -251.0
 offset_top = -1143.0
 offset_right = -171.0
 offset_bottom = -643.0
-color = Color(0.141176, 0.898039, 0, 1)
+color = Color(0.25098, 0.901961, 0.133333, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="UI/Is this needed?/MenusAndGame/GameObjects/Obstacles and button/Obstacle2/Pipe1"]
@@ -321,21 +322,30 @@ text = "BACK"
 
 [node name="MuteSFXbtn" type="CheckButton" parent="UI/Is this needed?/MenusAndGame/Settings"]
 offset_left = -554.0
-offset_top = 661.0
+offset_top = 641.0
 offset_right = -66.0
-offset_bottom = 1125.0
+offset_bottom = 1105.0
 scale = Vector2(0.2, 0.19)
 theme_override_icons/checked = ExtResource("16_psh0t")
 theme_override_icons/unchecked = ExtResource("17_qk0pc")
 
 [node name="MuteMUSICbtn" type="CheckButton" parent="UI/Is this needed?/MenusAndGame/Settings"]
-offset_left = -450.0
-offset_top = 654.0
-offset_right = 62.0
-offset_bottom = 1162.0
+offset_left = -456.0
+offset_top = 641.0
+offset_right = 56.0
+offset_bottom = 1149.0
 scale = Vector2(0.2, 0.19)
 theme_override_icons/checked = ExtResource("25_wkd5x")
 theme_override_icons/unchecked = ExtResource("26_io3oi")
+
+[node name="ChangeSpritebtn" type="CheckButton" parent="UI/Is this needed?/MenusAndGame/Settings"]
+offset_left = -332.0
+offset_top = 641.0
+offset_right = 2693.0
+offset_bottom = 3449.0
+scale = Vector2(0.04, 0.038)
+theme_override_icons/checked = ExtResource("27_3oa8d")
+theme_override_icons/unchecked = ExtResource("13_05yf0")
 
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("9_t0plc")
@@ -359,3 +369,4 @@ visible = false
 [connection signal="pressed" from="UI/Is this needed?/MenusAndGame/Settings/BackFromSettings" to="UI/Is this needed?/MenusAndGame" method="_on_back_from_settings_pressed"]
 [connection signal="toggled" from="UI/Is this needed?/MenusAndGame/Settings/MuteSFXbtn" to="Global" method="_on_check_button_toggled"]
 [connection signal="toggled" from="UI/Is this needed?/MenusAndGame/Settings/MuteMUSICbtn" to="Global" method="_on_mute_musi_cbtn_toggled"]
+[connection signal="toggled" from="UI/Is this needed?/MenusAndGame/Settings/ChangeSpritebtn" to="UI/Is this needed?/MenusAndGame" method="_on_change_spritebtn_toggled"]
