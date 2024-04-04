@@ -46,7 +46,8 @@ func _on_pipe_1_body_entered(body):		#wanted to connect to above funcion but noo
 func _on_score_adder_1_body_entered(body):
 	Global.score += 1
 	$"../ScoreLabel".text = "Score: " + str(Global.score)
+	$"../Audio/ScoreDing".play()
 	if(Global.obstacle_speed >= -1000):
-		Global.obstacle_speed -= 1
+		Global.obstacle_speed -= 0.2
 
 

@@ -3,8 +3,8 @@ extends Node2D
 var is_playing = false
 var score = 0
 var obstacle_speed = -420
-var basic_texture = preload("res://Sprites/bird_idle.png")
-var nostalgia_texture = preload("res://Sprites/bird_idle _nostalgic.png")
+var basic_texture = preload("res://Sprites/LightMode/bird_idle_settingsbtn.png")
+var nostalgia_texture = preload("res://Sprites/LightMode/bird_idle_nostalgic_settingsbtn.png")
 var save_data:SaveData
 signal Send_signal
 # Called when the node enters the scene tree for the first time.
