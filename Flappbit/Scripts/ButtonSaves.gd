@@ -8,7 +8,7 @@ func _ready():	#deals with setting state of buttons after loading save
 	$"UI/Is this needed?/MenusAndGame/Settings/SettingsButtonVbox/ChangeSpritebtn".button_pressed = Global.save_data.nostalgia_texture_on
 
 func _notification(what) -> void:
-	if what == MainLoop.NOTIFICATION_APPLICATION_PAUSED or what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && Global.is_playing == true:	#detects unfocus from game and pauses
+	if what == MainLoop.NOTIFICATION_APPLICATION_PAUSED or what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && Global.is_playing == true and Global.is_playing == true:	#detects unfocus from game and pauses
 		Global.is_playing = false
 		$PauseMenu.show()
 

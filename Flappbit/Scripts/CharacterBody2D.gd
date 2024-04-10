@@ -20,7 +20,6 @@ func _physics_process(delta):
 
 		move_and_slide()
 
-
 func _on_button_pressed():		#jumps on button press(button is entire screen)
 	if(Global.is_playing == true):
 		$"../Audio/JumpSoundPlayer".play()
@@ -42,6 +41,7 @@ func _on_pipe_1_body_entered(body):		#wanted to connect to above funcion but noo
 		$"../../../../../BeginMenu".show()
 		$"../PauseButton".hide()
 		$"../Audio/BGmusic".stop()
+		
 
 func _on_score_adder_1_body_entered(body):
 	Global.score += 1
